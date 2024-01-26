@@ -1,0 +1,17 @@
+{
+  "name": "spracheingabe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Geyrhofer, Julian Gabriel",
+  "license": "GOOF",
+  "dependencies": {
+    "cordova": "^12.0.0"
+  }
+}
