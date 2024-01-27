@@ -8,4 +8,14 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+
+    <platform name="android">
+    <icon src="res/mic.svg" />
+    <preference name="AndroidWindowSplashScreenIcon" value="res/mic.svg" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="SplashScreen" value="none" />
+    <preference name="AutoHideSplashScreen" value="false" />
+</platform>
 </widget>
+
+
