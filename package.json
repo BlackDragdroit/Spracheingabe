@@ -15,14 +15,16 @@
   "devDependencies": {
     "cordova-android": "^12.0.1",
     "cordova-plugin-file": "^8.0.1",
-    "cordova-plugin-media-capture": "^5.0.0"
+    "cordova-plugin-media-capture": "^5.0.0",
+    "cordova-plugin-network-information": "^3.0.0"
   },
   "cordova": {
     "platforms": [
       "android"
     ],
     "plugins": {
-      "cordova-plugin-media-capture": {}
+      "cordova-plugin-media-capture": {},
+      "cordova-plugin-network-information": {}
     }
   }
 }
