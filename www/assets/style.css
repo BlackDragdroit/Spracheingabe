@@ -24,6 +24,11 @@ body {
     font-size: 2.5rem !important;
   }
 
+  #console-log-textarea {
+    width: 80vw;
+    height: 200px;
+  }
+
   .controlBox {
     bottom: 20px;
     text-align: center;

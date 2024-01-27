@@ -74,6 +74,14 @@ document.onreadystatechange = (e) => {
 
   var words = [];
 
+  var oldLog = console.log;
+    console.log = function (message) {
+        oldLog.apply(console, arguments);
+        // Output the message to the textarea
+        document.getElementById('console-log-textarea').value += message + '\n';
+    };
+
+  //Online/Offline state check browser
   window.ononline = function () {
     changeOnlineState("on");
     if (
@@ -89,6 +97,22 @@ document.onreadystatechange = (e) => {
   window.onoffline = function () {
     changeOnlineState("off");
   };
+//Online/Offline state check device
+  document.addEventListener("online", function() {
+    changeOnlineState("on");
+    if (
+      localStorage.getItem("words") == null ||
+      localStorage.getItem("words") == ""
+    )
+      return;
+    var offlineWords = JSON.parse(localStorage.getItem("words"));
+    saveWordsToDatabase(offlineWords);
+    localStorage.removeItem("words");
+  });
+
+  document.addEventListener("offline", function() {
+    changeOnlineState("off");
+  });
 
   function saveWordsToDatabase(words) {
     try {
