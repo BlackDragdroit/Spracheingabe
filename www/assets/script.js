@@ -8,6 +8,16 @@ function onDeviceReady() {
   }
 }
 
+//Start Speech Recognition using cordova speech recognition plugin
+window.plugins.speechRecognition.startListening(
+  function (result) {
+    console.log(result);
+  },
+  function (err) {
+    console.error(err);
+  }
+);
+
 function clickListenStart() {
   tspSocket.grantPermission();
 

@@ -16,7 +16,8 @@
     "cordova-android": "^12.0.1",
     "cordova-plugin-file": "^8.0.1",
     "cordova-plugin-media-capture": "^5.0.0",
-    "cordova-plugin-network-information": "^3.0.0"
+    "cordova-plugin-network-information": "^3.0.0",
+    "cordova-plugin-speechrecognition": "^1.2.0"
   },
   "cordova": {
     "platforms": [
@@ -24,7 +25,8 @@
     ],
     "plugins": {
       "cordova-plugin-media-capture": {},
-      "cordova-plugin-network-information": {}
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-speechrecognition": {}
     }
   }
 }
