@@ -97,8 +97,7 @@ document.onreadystatechange = (e) => {
   window.onoffline = function () {
     changeOnlineState("off");
   };
-//Online/Offline state check device
-  document.addEventListener("online", function() {
+  function onOnline() {
     changeOnlineState("on");
     if (
       localStorage.getItem("words") == null ||
@@ -108,11 +107,17 @@ document.onreadystatechange = (e) => {
     var offlineWords = JSON.parse(localStorage.getItem("words"));
     saveWordsToDatabase(offlineWords);
     localStorage.removeItem("words");
-  });
+  }
 
-  document.addEventListener("offline", function() {
+  function onOffline() {
     changeOnlineState("off");
-  });
+  }
+
+  // Add event listeners for online and offline events
+  document.addEventListener("online", onOnline, false);
+  document.addEventListener("offline", onOffline, false);
+  window.addEventListener("online", onOnline, false);
+  window.addEventListener("offline", onOffline, false);
 
   function saveWordsToDatabase(words) {
     try {
